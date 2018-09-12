@@ -76,5 +76,20 @@
                 ctx[drawMethod](v, x, y + i * (fontSize + (lineHeight - fontSize) / 2));
             });
         },
+        drawRoundRect(ctx, x, y, w, h, r) { // 绘制圆角矩形
+            if (w < 2 * r) {
+                r = w / 2;
+            }
+            if (h < 2 * r) {
+                r = h / 2;
+            }
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+        },
     };
 });
