@@ -18,6 +18,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }
 })('canvasApi', function () {
     return {
+        /*
+            canvas，设置字体，只有一个font属性，所以后续如果更改文字大小，也需要重新设置font。
+            每次重置font都应该设置上fontFamily。
+            所以把font封装到内部是正确的做法。
+            如果拿出来的话，需要正则匹配文字大小。如果用户设置了错误的font。则正则会匹配不到进而报错。
+            font封装到内部，然后对齐方式使用middle。之后对y轴坐标处理一下，可以完美绘制多行或者单行文本。
+        */
         drawMoreLineText: function drawMoreLineText() {
             var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
             // canvas绘制多行文本，或者单行文本，超出显示省略号。源码：https://github.com/zhouhuafei/zhf.canvas-api/blob/master/src/index.js
