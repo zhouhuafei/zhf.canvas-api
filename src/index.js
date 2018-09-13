@@ -33,7 +33,7 @@
             if (!ctx) {
                 return;
             }
-            ctx.font = `${fontSize}px ${fontFamily}`;
+            ctx.font = `${Math.round(fontSize)}px ${fontFamily}`; // 因微信小程序中，font属性对应的值里，如果fontSize带小数，会导致设置失败，变成默认的10px sans-serif。所以这里做了下处理。
             ctx.textBaseline = 'middle';
             y = y + fontSize / 2 + (lineHeight - fontSize) / 2; // 重置y轴坐标到精准的位置。
             const items = [];
