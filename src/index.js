@@ -96,6 +96,5 @@
             ctx.shadowBlur = 20;
             ctx.shadowColor = color;
         },
-
     };
 });
