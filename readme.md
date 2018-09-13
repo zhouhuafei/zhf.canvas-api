@@ -3,8 +3,8 @@
 const canvasApi = require('zhf.canvas-api');
 ```
 * 画多行文字
-> canvasApi.drawMoreLineText({ctx, text, x, y, fontSize, fontFamily, lineHeight, lineWidth, lineNum, isFillEllipsis, drawMethod})
+> canvasApi.drawMoreLineText({ctx, text, x, y, fontSize, fontFamily, lineHeight, lineWidth, lineNum, isFillEllipsis, drawMethod});
 * 画圆角矩形
-> canvasApi.drawRoundRect(ctx, x, y, w, h, r)
+> canvasApi.drawRoundRect(ctx, x, y, w, h, r);
 * 设置阴影
-> canvasApisetShadow(ctx, offsetX, offsetY, blur, color)
+> canvasApisetShadow(ctx, offsetX, offsetY, blur, color);
