@@ -102,6 +102,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             ctx.arc(x + w - r, y + h - r, r, 0, Math.PI * 0.5);
             ctx.arc(x + r, y + h - r, r, Math.PI * 0.5, Math.PI);
             ctx.closePath();
+        },
+        setShadow: function setShadow(ctx, offsetX, offsetY, blur, color) {
+            // 设置阴影
+            ctx.shadowOffsetX = offsetX;
+            ctx.shadowOffsetY = offsetY;
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = color;
         }
     };
 });

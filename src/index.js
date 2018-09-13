@@ -90,5 +90,12 @@
             ctx.arc(x + r, y + h - r, r, Math.PI * 0.5, Math.PI);
             ctx.closePath();
         },
+        setShadow(ctx, offsetX, offsetY, blur, color) { // 设置阴影
+            ctx.shadowOffsetX = offsetX;
+            ctx.shadowOffsetY = offsetY;
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = color;
+        },
+
     };
 });
