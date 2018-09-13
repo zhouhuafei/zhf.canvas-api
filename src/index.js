@@ -77,6 +77,7 @@
             });
         },
         drawRoundRect(ctx, x, y, w, h, r) { // 绘制圆角矩形
+            /*
             if (w < 2 * r) {
                 r = w / 2;
             }
@@ -89,6 +90,13 @@
             ctx.arcTo(x + w, y + h, x, y + h, r);
             ctx.arcTo(x, y + h, x, y, r);
             ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+            */
+            ctx.beginPath();
+            ctx.arc(x + r, y + r, r, Math.PI, Math.PI * 1.5);
+            ctx.arc(x + w - r, y + r, r, Math.PI * 1.5, Math.PI * 2);
+            ctx.arc(x + w - r, y + h - r, r, 0, Math.PI * 0.5);
+            ctx.arc(x + r, y + h - r, r, Math.PI * 0.5, Math.PI);
             ctx.closePath();
         },
     };
