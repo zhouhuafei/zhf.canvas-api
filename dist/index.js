@@ -87,6 +87,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             items.forEach(function (v, i) {
                 ctx[drawMethod](v, x, y + i * (fontSize + (lineHeight - fontSize) / 2));
             });
+            return { items: items };
         },
         drawRoundRect: function drawRoundRect(ctx, x, y, w, h, r) {
             // 绘制圆角矩形
