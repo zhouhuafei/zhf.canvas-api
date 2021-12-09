@@ -85,7 +85,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
             // 绘画文字
             items.forEach(function (v, i) {
-                ctx[drawMethod](v, x, y + i * (fontSize + (lineHeight - fontSize) / 2));
+                ctx[drawMethod](v, x, y + i * (fontSize + (lineHeight - fontSize)));
             });
             return { items: items };
         },
