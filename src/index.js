@@ -75,6 +75,7 @@
             items.forEach(function (v, i) {
                 ctx[drawMethod](v, x, y + i * (fontSize + (lineHeight - fontSize) / 2));
             });
+            return { items };
         },
         drawRoundRect(ctx, x, y, w, h, r) { // 绘制圆角矩形
             if (w < 2 * r) {
